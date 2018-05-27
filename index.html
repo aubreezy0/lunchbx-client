@@ -12,6 +12,29 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Welcome to Lunchbx</h1>
+      <!-- <h1>Welcome to Lunchbx</h1> -->
+      <h1 data-id="" class="sign-up">Sign Up</h1>
+
+      <form class="sign-up">
+        <fieldset>
+          <input type="email" name="credentials[email]" autocomplete="email" placeholder="Email" required>
+          <input type="text" name="credentials[username]" autocomplete="email" placeholder="Display Name" required>
+          <input type="password" name="credentials[password]" autocomplete="password" placeholder="Password" required>
+          <input type="password" name="credentials[password_confirmation]" autocomplete="password"  placeholder="Password Confirmation" required>
+          <input class="button" type="submit" value="Sign up!">
+        </fieldset>
+      </form>
+
+      <h1 data-id="" class="sign-in">Sign In</h1>
+
+      <form class="sign-in">
+        <fieldset>
+          <input type="email" name="credentials[email]" autocomplete="email" placeholder="Email" required>
+          <input type="password" name="credentials[password]" autocomplete="password" placeholder="Password" required>
+          <input class="button" type="submit" value="Sign In!">
+        </fieldset>
+      </form>
+
+      <p id="message"></p>
     </body>
 </html>
