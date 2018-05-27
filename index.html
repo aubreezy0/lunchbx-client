@@ -18,7 +18,7 @@
       <form class="sign-up">
         <fieldset>
           <input type="email" name="credentials[email]" autocomplete="email" placeholder="Email" required>
-          <input type="text" name="credentials[username]" autocomplete="email" placeholder="Display Name" required>
+          <input type="text" name="credentials[display_name]" autocomplete="email" placeholder="Display Name" required>
           <input type="password" name="credentials[password]" autocomplete="password" placeholder="Password" required>
           <input type="password" name="credentials[password_confirmation]" autocomplete="password"  placeholder="Password Confirmation" required>
           <input class="button" type="submit" value="Sign up!">
@@ -32,6 +32,24 @@
           <input type="email" name="credentials[email]" autocomplete="email" placeholder="Email" required>
           <input type="password" name="credentials[password]" autocomplete="password" placeholder="Password" required>
           <input class="button" type="submit" value="Sign In!">
+        </fieldset>
+      </form>
+
+      <h1 data-id="" class="change-password">Change Password</h1>
+
+      <form class="change-password">
+        <fieldset>
+          <input type="password" name="passwords[old]" autocomplete="password" placeholder="Old Password" required>
+          <input type="password" name="passwords[new]" autocomplete="password" placeholder="New Password" required>
+          <input class="button" type="submit" value="Update Password">
+        </fieldset>
+      </form>
+
+      <h1 data-id="" class="sign-up">Sign Out</h1>
+
+      <form class="sign-out">
+        <fieldset>
+          <input class="button" type="submit" value="Sign Out">
         </fieldset>
       </form>
 
