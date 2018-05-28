@@ -8,7 +8,7 @@ const signUpSuccess = function () {
   $('form').trigger('reset')
   setTimeout(() => {
     $('#message').html('')
-  }, 3000
+  }, 10000
   )
 }
 
@@ -18,7 +18,7 @@ const signUpFailure = function () {
   $('form').trigger('reset')
   setTimeout(() => {
     $('#message').html('')
-  }, 3000
+  }, 10000
   )
 }
 
@@ -30,7 +30,7 @@ const signInSuccess = function (data) {
   $('.modal').modal('hide')
   setTimeout(() => {
     $('#message').html('')
-  }, 3000
+  }, 10000
   )
   store.user = data.user
   // store.user = data.user
@@ -44,7 +44,7 @@ const signInFailure = function () {
   $('form').trigger('reset')
   setTimeout(() => {
     $('#message').html('')
-  }, 3000
+  }, 10000
   )
 }
 
@@ -85,7 +85,7 @@ const signOutFailure = function () {
   $('form').trigger('reset')
   setTimeout(() => {
     $('#message').html('')
-  }, 3000
+  }, 10000
   )
 }
 

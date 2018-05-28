@@ -17,7 +17,6 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   api.signIn(data)
     .then(ui.signInSuccess)
     // I believe this is what creates the auto advance
@@ -28,7 +27,6 @@ const onSignIn = function (event) {
 const onChangePassword = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)

@@ -27,7 +27,20 @@ const updateRestaurant = function (data) {
   })
 }
 
+const deleteRestaurant = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/restaurants/' + data.restaurant.id,
+    method: 'DELETE',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   addRestaurant,
-  updateRestaurant
+  updateRestaurant,
+  deleteRestaurant
 }

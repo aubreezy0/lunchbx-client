@@ -7,7 +7,6 @@ const api = require('./api-restaurant')
 const onAddRestaurant = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   api.addRestaurant(data)
     .then(ui.addRestaurantSuccess)
     // I believe this is what creates the auto advance
@@ -18,7 +17,6 @@ const onAddRestaurant = function (event) {
 const onUpdateRestaurant = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   api.updateRestaurant(data)
     .then(ui.udpateRestaurantSuccess)
     // I believe this is what creates the auto advance
@@ -26,9 +24,20 @@ const onUpdateRestaurant = function (event) {
     .catch(ui.udpateRestaurantFailure)
 }
 
+const onDeleteRestaurant = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.deleteRestaurant(data)
+    .then(ui.deleteRestaurantSuccess)
+    // I believe this is what creates the auto advance
+    // .then(() => { signInNoEvent(data) })
+    .catch(ui.deleteRestaurantFailure)
+}
+
 const addHandlers = () => {
   $('body').on('submit', '.add-restaurant', onAddRestaurant)
   $('body').on('submit', '.update-restaurant', onUpdateRestaurant)
+  $('body').on('submit', '.delete-restaurant', onDeleteRestaurant)
 }
 
 module.exports = {

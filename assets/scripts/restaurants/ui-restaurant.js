@@ -8,7 +8,7 @@ const addRestaurantSuccess = function (data) {
   $('form').trigger('reset')
   setTimeout(() => {
     $('#message').html('')
-  }, 3000
+  }, 10000
   )
   store.user = data.user
 }
@@ -19,17 +19,18 @@ const addRestaurantFailure = function () {
   $('form').trigger('reset')
   setTimeout(() => {
     $('#message').html('')
-  }, 3000
+  }, 10000
   )
 }
 
-const udpateRestaurantSuccess = function () {
+const udpateRestaurantSuccess = function (data) {
+  console.log(data)
   $('#message').html(`<div class="alert alert-success" role="alert">You have succesfully updated the restaurant!</div>`)
   $('#message').css('text-align', 'center')
   $('form').trigger('reset')
   setTimeout(() => {
     $('#message').html('')
-  }, 3000
+  }, 10000
   )
 }
 
@@ -39,7 +40,28 @@ const udpateRestaurantFailure = function () {
   $('form').trigger('reset')
   setTimeout(() => {
     $('#message').html('')
-  }, 3000
+  }, 10000
+  )
+}
+
+const deleteRestaurantSuccess = function (data) {
+  console.log(data)
+  $('#message').html(`<div class="alert alert-success" role="alert">You have succesfully deleted the restaurant!</div>`)
+  $('#message').css('text-align', 'center')
+  $('form').trigger('reset')
+  setTimeout(() => {
+    $('#message').html('')
+  }, 10000
+  )
+}
+
+const deleteRestaurantFailure = function () {
+  $('#message').html(`<div class="alert alert-danger" role="alert">Failed to delete restaurant</div>`)
+  $('#message').css('text-align', 'center')
+  $('form').trigger('reset')
+  setTimeout(() => {
+    $('#message').html('')
+  }, 10000
   )
 }
 
@@ -47,5 +69,7 @@ module.exports = {
   addRestaurantSuccess,
   addRestaurantFailure,
   udpateRestaurantSuccess,
-  udpateRestaurantFailure
+  udpateRestaurantFailure,
+  deleteRestaurantSuccess,
+  deleteRestaurantFailure
 }
