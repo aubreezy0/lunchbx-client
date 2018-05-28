@@ -65,11 +65,34 @@ const deleteRestaurantFailure = function () {
   )
 }
 
+const showRestaurantsSuccess = function (data) {
+  console.log(data)
+  $('#message').html(`<div class="alert alert-success" role="alert">Look at all these restaurants!</div>`)
+  $('#message').css('text-align', 'center')
+  $('form').trigger('reset')
+  setTimeout(() => {
+    $('#message').html('')
+  }, 10000
+  )
+}
+
+const showRestaurantsFailure = function () {
+  $('#message').html(`<div class="alert alert-danger" role="alert"> Nothing to look at here.</div>`)
+  $('#message').css('text-align', 'center')
+  $('form').trigger('reset')
+  setTimeout(() => {
+    $('#message').html('')
+  }, 10000
+  )
+}
+
 module.exports = {
   addRestaurantSuccess,
   addRestaurantFailure,
   udpateRestaurantSuccess,
   udpateRestaurantFailure,
   deleteRestaurantSuccess,
-  deleteRestaurantFailure
+  deleteRestaurantFailure,
+  showRestaurantsSuccess,
+  showRestaurantsFailure
 }

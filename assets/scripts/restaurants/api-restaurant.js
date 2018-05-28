@@ -39,8 +39,22 @@ const deleteRestaurant = function (data) {
   })
 }
 
+const showRestaurants = function (data) {
+  // console.log('show all projects ran')
+  return $.ajax({
+    url: config.apiUrl + '/restaurants',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    method: 'GET',
+    data
+  })
+}
+
 module.exports = {
   addRestaurant,
   updateRestaurant,
-  deleteRestaurant
+  deleteRestaurant,
+  showRestaurants
 }
