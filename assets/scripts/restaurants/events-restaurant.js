@@ -15,8 +15,20 @@ const onAddRestaurant = function (event) {
     .catch(ui.addRestaurantFailure)
 }
 
+const onUpdateRestaurant = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.updateRestaurant(data)
+    .then(ui.udpateRestaurantSuccess)
+    // I believe this is what creates the auto advance
+    // .then(() => { signInNoEvent(data) })
+    .catch(ui.udpateRestaurantFailure)
+}
+
 const addHandlers = () => {
   $('body').on('submit', '.add-restaurant', onAddRestaurant)
+  $('body').on('submit', '.update-restaurant', onUpdateRestaurant)
 }
 
 module.exports = {
