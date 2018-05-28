@@ -1,5 +1,6 @@
 'use strict'
 const store = require('../store')
+const showRestaurantsTemplate = require('../templates/restaurant/show-restaurants.handlebars')
 
 const addRestaurantSuccess = function (data) {
   console.log(data)
@@ -48,9 +49,13 @@ const deleteRestaurantSuccess = function (data) {
   console.log(data)
   $('#message').html(`<div class="alert alert-success" role="alert">You have succesfully deleted the restaurant!</div>`)
   $('#message').css('text-align', 'center')
-  $('form').trigger('reset')
+  $('input[type=text]').val('')
+  $('input[type=number]').val('')
+  $('#show').remove()
+  // commenting out form trigger as now button
+  // $('form').trigger('reset')
   setTimeout(() => {
-    $('#message').html('')
+    $('#show').html('')
   }, 10000
   )
 }
@@ -66,14 +71,17 @@ const deleteRestaurantFailure = function () {
 }
 
 const showRestaurantsSuccess = function (data) {
+  const showRestaurantsHtml = showRestaurantsTemplate({ restaurants: data.restaurants })
   console.log(data)
-  $('#message').html(`<div class="alert alert-success" role="alert">Look at all these restaurants!</div>`)
-  $('#message').css('text-align', 'center')
-  $('form').trigger('reset')
-  setTimeout(() => {
-    $('#message').html('')
-  }, 10000
-  )
+  $('#show').html('').append(showRestaurantsHtml)
+
+  // $('#message').html(`<div class="alert alert-success" role="alert">Look at all these restaurants!</div>`)
+  // $('#message').css('text-align', 'center')
+  // $('form').trigger('reset')
+  // setTimeout(() => {
+  //   $('#message').html('')
+  // }, 10000
+  // )
 }
 
 const showRestaurantsFailure = function () {

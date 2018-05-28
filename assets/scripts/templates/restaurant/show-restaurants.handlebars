@@ -1,7 +1,36 @@
-<h1 data-id="" class="show-restaurants">Show Restaurants</h1>
 
-<form class="show-restaurants">
-  <fieldset>
-    <input class="button" type="submit" value="Show Restaurants">
-  </fieldset>
-</form>
+{{#each restaurants as |restaurant|}}
+
+  <h1 data-id="{{restaurant.id}}" class="show-restaurants">
+  </h1>
+  <ul data-id="{{restaurant.id}}">
+      {{#if restaurant.restaurant_name}}
+        {{restaurant.restaurant_name}}
+      {{else}}
+        No name information.
+      {{/if}}
+            <div></div>
+
+  Cuisine:
+      {{#if restaurant.cuisine}}
+        {{restaurant.cuisine}}
+      {{else}}
+        This cuisine is... not here?
+      {{/if}}
+      <div></div>
+
+ID:
+      {{#if restaurant.id}}
+        {{restaurant.id}}
+      {{else}}
+        Can't find Restaurant ID
+      {{/if}}
+  </ul>
+  <form class="delete-restaurant">
+    <fieldset>
+      <input type="hidden" name="restaurant[id]" autocomplete="restaurant id" placeholder="Restaurant ID" value="{{restaurant.id}}">
+      <input class="button" type="submit" value="Delete Restaurant">
+    </fieldset>
+  </form>
+
+{{/each}}

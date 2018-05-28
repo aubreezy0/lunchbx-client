@@ -29,6 +29,8 @@ const onDeleteRestaurant = function (event) {
   const data = getFormFields(event.target)
   api.deleteRestaurant(data)
     .then(ui.deleteRestaurantSuccess)
+    // adding new .then
+    .then(() => onShowRestaurants(event))
     .catch(ui.deleteRestaurantFailure)
 }
 
