@@ -1,5 +1,5 @@
 'use strict'
-const store = require('../store')
+// const store = require('../store')
 const showRestaurantsTemplate = require('../templates/restaurant/show-restaurants.handlebars')
 
 const addRestaurantSuccess = function (data) {
@@ -11,7 +11,7 @@ const addRestaurantSuccess = function (data) {
     $('#message').html('')
   }, 10000
   )
-  store.user = data.user
+  // store.user = data.user
 }
 
 const addRestaurantFailure = function () {
@@ -51,11 +51,15 @@ const deleteRestaurantSuccess = function (data) {
   $('#message').css('text-align', 'center')
   $('input[type=text]').val('')
   $('input[type=number]').val('')
-  $('#show').remove()
+  // $('#show').remove()
   // commenting out form trigger as now button
-  // $('form').trigger('reset')
+  $('form').trigger('reset')
   setTimeout(() => {
     $('#show').html('')
+  }, 50
+  )
+  setTimeout(() => {
+    $('#message').html('')
   }, 10000
   )
 }

@@ -2,9 +2,11 @@
 
 <form class="update-restaurant">
   <fieldset>
-    <input type="number" name="id" autocomplete="restaurant id" placeholder="Restaurant ID" required>
+    <input type="hidden" name="id" autocomplete="restaurant id" placeholder="Restaurant ID" required>
+
+
     <input type="text" name="restaurant[restaurant_name]" autocomplete="restaurant" placeholder="Restaurant Name" required>
     <input type="text" name="restaurant[cuisine]" autocomplete="cuisine" placeholder="Cuisine" required>
-    <input class="button" type="submit" value="Update Restaurant">
+    <input class="button" type="submit" value="Update">
   </fieldset>
 </form>
