@@ -18,7 +18,7 @@
       <form class="sign-up">
         <fieldset>
           <input type="email" name="credentials[email]" autocomplete="email" placeholder="Email" required>
-          <input type="text" name="credentials[display_name]" autocomplete="email" placeholder="Display Name" required>
+          <input type="text" name="credentials[display_name]" autocomplete="display-name" placeholder="Display Name" required>
           <input type="password" name="credentials[password]" autocomplete="password" placeholder="Password" required>
           <input type="password" name="credentials[password_confirmation]" autocomplete="password"  placeholder="Password Confirmation" required>
           <input class="button" type="submit" value="Sign up!">
@@ -45,11 +45,21 @@
         </fieldset>
       </form>
 
-      <h1 data-id="" class="sign-up">Sign Out</h1>
+      <h1 data-id="" class="sign-out">Sign Out</h1>
 
       <form class="sign-out">
         <fieldset>
           <input class="button" type="submit" value="Sign Out">
+        </fieldset>
+      </form>
+
+      <h1 data-id="" class="add-restaurant">Add Restaurant</h1>
+
+      <form class="add-restaurant">
+        <fieldset>
+          <input type="text" name="restaurant[restaurant_name]" autocomplete="restaurant" placeholder="Restaurant Name" required>
+          <input type="text" name="restaurant[cuisine]" autocomplete="cuisine" placeholder="Cuisine" required>
+          <input class="button" type="submit" value="Add Restaurant">
         </fieldset>
       </form>
 

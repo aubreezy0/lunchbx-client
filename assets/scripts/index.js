@@ -7,6 +7,7 @@
 // require('./example')
 
 const authEvents = require('./auth/events')
+const restaurantEvents = require('./restaurants/events-restaurant')
 // const fileUploadEvents = require('./fileupload/fileuploadevents')
 
 // const navHandlebars = require('./templates/nav.handlebars')
@@ -21,7 +22,7 @@ const authEvents = require('./auth/events')
 $(() => {
   // your JS code goes here
   authEvents.addHandlers()
-  // fileUploadEvents.addHandlers()
+  restaurantEvents.addHandlers()
   // // $('body').prepend(navHTML)
   // $('body').append(homePageHTML)
   // $('body').on('click', '.nav-tabs a', function (e) {

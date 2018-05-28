@@ -18,3 +18,5 @@ Notes from meeting:
 After: maps, groups,
 
 Plan is to implement handlebars.
+
+5/27 struggles with auth led to: switching to new branch and trying to copy over (problems got worse). eventually reverted the file and redid some of the work which revealed some mistakes I'd made along the way.
