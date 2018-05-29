@@ -38,7 +38,13 @@ const udpateRestaurantSuccess = function (data) {
 const udpateRestaurantFailure = function () {
   $('#message').html(`<div class="alert alert-danger" role="alert">Failed to update restaurant</div>`)
   $('#message').css('text-align', 'center')
+  $('input[type=text]').val('')
+  $('input[type=number]').val('')
   $('form').trigger('reset')
+  setTimeout(() => {
+    $('#show').html('')
+  }, 50
+  )
   setTimeout(() => {
     $('#message').html('')
   }, 10000
@@ -67,7 +73,10 @@ const deleteRestaurantSuccess = function (data) {
 const deleteRestaurantFailure = function () {
   $('#message').html(`<div class="alert alert-danger" role="alert">Failed to delete restaurant</div>`)
   $('#message').css('text-align', 'center')
-  $('form').trigger('reset')
+  setTimeout(() => {
+    $('#show').html('')
+  }, 50
+  )
   setTimeout(() => {
     $('#message').html('')
   }, 10000

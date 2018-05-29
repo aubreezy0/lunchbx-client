@@ -19,8 +19,7 @@ const onUpdateRestaurant = function (event) {
   const data = getFormFields(event.target)
   api.updateRestaurant(data)
     .then(ui.udpateRestaurantSuccess)
-    // I believe this is what creates the auto advance
-    // .then(() => { signInNoEvent(data) })
+    .then(() => onShowRestaurants(event))
     .catch(ui.udpateRestaurantFailure)
 }
 

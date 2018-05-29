@@ -1,6 +1,11 @@
 'use strict'
 const store = require('../store')
 
+// const signUpTemplate = require('../templates/sign-up.handlebars')
+// const signInTemplate = require('../templates/sign-in.handlebars')
+// const changePasswordTemplate = require('../templates/change-password.handlebars')
+// const signOutTemplate = require('../templates/sign-out.handlebars')
+
 const signUpSuccess = function () {
   console.log('from signUpSuccess')
   $('#message').html(`<div class="alert alert-success" role="alert">You have succesfully signed up</div>`)
@@ -8,8 +13,8 @@ const signUpSuccess = function () {
   $('form').trigger('reset')
   setTimeout(() => {
     $('#message').html('')
-  }, 10000
-  )
+  }, 10000)
+  $('.sign-up').addClass('hidden')
 }
 
 const signUpFailure = function () {
@@ -18,8 +23,7 @@ const signUpFailure = function () {
   $('form').trigger('reset')
   setTimeout(() => {
     $('#message').html('')
-  }, 10000
-  )
+  }, 10000)
 }
 
 const signInSuccess = function (data) {
@@ -30,8 +34,10 @@ const signInSuccess = function (data) {
   $('.modal').modal('hide')
   setTimeout(() => {
     $('#message').html('')
-  }, 10000
-  )
+  }, 10000)
+  $('.sign-up').addClass('hidden')
+  $('.sign-in').addClass('hidden')
+  $('.lunch-stuff').removeClass('hidden')
   store.user = data.user
   // store.user = data.user
   // const createFileUploadHandlebars = require('../templates/file-upload/create-file.handlebars')
@@ -76,6 +82,9 @@ const signOutSuccess = function (data) {
     $('#message').html('')
   }, 3000
   )
+  $('.sign-up').removeClass('hidden')
+  $('.sign-in').removeClass('hidden')
+  $('.lunch-stuff').addClass('hidden')
   store.user = null
 }
 

@@ -1,12 +1,14 @@
-<h1 data-id="" class="update-restaurant">Update Restaurant</h1>
+<h3 data-id="" class="update-restaurant">Update Restaurant</h3>
 
 <form class="update-restaurant">
   <fieldset>
-    <input type="hidden" name="id" autocomplete="restaurant id" placeholder="Restaurant ID" required>
+      <input type="hidden" name="restaurant[id]" autocomplete="restaurant id" placeholder="Restaurant ID" value="{{restaurant.id}}">
 
 
     <input type="text" name="restaurant[restaurant_name]" autocomplete="restaurant" placeholder="Restaurant Name" required>
+
     <input type="text" name="restaurant[cuisine]" autocomplete="cuisine" placeholder="Cuisine" required>
+
     <input class="button" type="submit" value="Update">
   </fieldset>
 </form>

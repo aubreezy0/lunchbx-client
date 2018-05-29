@@ -12,8 +12,9 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <!-- <h1>Welcome to Lunchbx</h1> -->
-      <h1 data-id="" class="sign-up">Sign Up</h1>
+      <h1>Welcome to Lunchbx</h1>
+            <p id="message"></p>
+      <h2 data-id="" class="sign-up">Sign Up</h2>
 
       <form class="sign-up">
         <fieldset>
@@ -25,7 +26,7 @@
         </fieldset>
       </form>
 
-      <h1 data-id="" class="sign-in">Sign In</h1>
+      <h2 data-id="" class="sign-in">Sign In</h2>
 
       <form class="sign-in">
         <fieldset>
@@ -35,25 +36,8 @@
         </fieldset>
       </form>
 
-      <h1 data-id="" class="change-password">Change Password</h1>
-
-      <form class="change-password">
-        <fieldset>
-          <input type="password" name="passwords[old]" autocomplete="password" placeholder="Old Password" required>
-          <input type="password" name="passwords[new]" autocomplete="password" placeholder="New Password" required>
-          <input class="button" type="submit" value="Update Password">
-        </fieldset>
-      </form>
-
-      <h1 data-id="" class="sign-out">Sign Out</h1>
-
-      <form class="sign-out">
-        <fieldset>
-          <input class="button" type="submit" value="Sign Out">
-        </fieldset>
-      </form>
-
-      <h1 data-id="" class="add-restaurant">Add Restaurant</h1>
+    <div class="lunch-stuff hidden">
+      <h2 data-id="" class="add-restaurant">Add Restaurant</h2>
 
       <form class="add-restaurant">
         <fieldset>
@@ -63,7 +47,7 @@
         </fieldset>
       </form>
 
-      <h1 data-id="" class="update-restaurant">Update Restaurant</h1>
+      <!-- <h2 data-id="" class="update-restaurant">Update Restaurant</h2>
 
       <form class="update-restaurant">
         <fieldset>
@@ -72,18 +56,38 @@
           <input type="text" name="restaurant[cuisine]" autocomplete="cuisine" placeholder="Cuisine" required>
           <input class="button" type="submit" value="Update Restaurant">
         </fieldset>
-      </form>
+      </form> -->
 
-      <!-- <h1 data-id="" class="delete-restaurant">Delete Restaurant</h1>/-->
+      <!-- <h2 data-id="" class="delete-restaurant">Delete Restaurant</h2>/-->
 
-      <h1 data-id="" class="show-restaurants">Show Restaurants</h1>
+      <h2 data-id="" class="show-restaurants">Show Restaurants</h2>
 
       <form class="show-restaurants">
         <fieldset>
           <input class="button" type="submit" value="Show Restaurants">
         </fieldset>
       </form>
+
       <p id="show"></p>
-      <p id="message"></p>
+
+      <h2 data-id="" class="change-password">Change Password</h2>
+
+      <form class="change-password">
+        <fieldset>
+          <input type="password" name="passwords[old]" autocomplete="password" placeholder="Old Password" required>
+          <input type="password" name="passwords[new]" autocomplete="password" placeholder="New Password" required>
+          <input class="button" type="submit" value="Update Password">
+        </fieldset>
+      </form>
+
+      <h2 data-id="" class="sign-out">Sign Out</h2>
+
+      <form class="sign-out">
+        <fieldset>
+          <input class="button" type="submit" value="Sign Out">
+        </fieldset>
+      </form>
+    </div>
+
     </body>
 </html>
