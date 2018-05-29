@@ -41,11 +41,21 @@ const onShowRestaurants = function (event) {
     .catch(ui.showRestaurantsFailure)
 }
 
+const onShowUpdateForm = function (event) {
+  console.log('clicked')
+  event.preventDefault()
+  $('.update-restaurant-form').removeClass('hidden')
+  $('.show-update-form').addClass('hidden')
+  // .then(ui.showUpdateFormSuccess)
+}
+
 const addHandlers = () => {
   $('body').on('submit', '.add-restaurant', onAddRestaurant)
   $('body').on('submit', '.update-restaurant', onUpdateRestaurant)
   $('body').on('submit', '.delete-restaurant', onDeleteRestaurant)
   $('body').on('submit', '.show-restaurants', onShowRestaurants)
+
+  $('body').on('click', '.show-update-form', onShowUpdateForm)
 }
 
 module.exports = {

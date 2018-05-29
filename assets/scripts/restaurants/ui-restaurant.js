@@ -107,6 +107,12 @@ const showRestaurantsFailure = function () {
   )
 }
 
+const showUpdateFormSuccess = function () {
+  // $(document).ready(function () {
+  // $('update-restaurant-form').removeClass('hidden')
+  // })
+}
+
 module.exports = {
   addRestaurantSuccess,
   addRestaurantFailure,
@@ -115,5 +121,6 @@ module.exports = {
   deleteRestaurantSuccess,
   deleteRestaurantFailure,
   showRestaurantsSuccess,
-  showRestaurantsFailure
+  showRestaurantsFailure,
+  showUpdateFormSuccess
 }
