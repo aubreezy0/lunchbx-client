@@ -42,11 +42,18 @@ const onShowRestaurants = function (event) {
 }
 
 const onShowUpdateForm = function (event) {
-  console.log('clicked')
+  console.log(this)
   event.preventDefault()
   $('.update-restaurant-form').removeClass('hidden')
+  // $('.show-update-form').parents('.update-restaurant-form').removeClass('hidden')
   $('.show-update-form').addClass('hidden')
   // .then(ui.showUpdateFormSuccess)
+}
+
+const onCloseList = function (event) {
+  console.log('clicked')
+  event.preventDefault()
+  $('#show').html('')
 }
 
 const addHandlers = () => {
@@ -54,8 +61,8 @@ const addHandlers = () => {
   $('body').on('submit', '.update-restaurant', onUpdateRestaurant)
   $('body').on('submit', '.delete-restaurant', onDeleteRestaurant)
   $('body').on('submit', '.show-restaurants', onShowRestaurants)
-
   $('body').on('click', '.show-update-form', onShowUpdateForm)
+  $('body').on('click', '.close-list', onCloseList)
 }
 
 module.exports = {
