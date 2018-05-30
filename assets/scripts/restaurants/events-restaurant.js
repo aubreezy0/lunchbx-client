@@ -9,6 +9,7 @@ const onAddRestaurant = function (event) {
   const data = getFormFields(event.target)
   api.addRestaurant(data)
     .then(ui.addRestaurantSuccess)
+    .then(() => onShowRestaurants(event))
     // I believe this is what creates the auto advance
     // .then(() => { signInNoEvent(data) })
     .catch(ui.addRestaurantFailure)

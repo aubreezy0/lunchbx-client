@@ -78,6 +78,7 @@ const signOutSuccess = function (data) {
   $('#message').html(`<div class="alert alert-success" role="alert">You have succesfully signed out!</div>`)
   $('#message').css('text-align', 'center')
   $('form').trigger('reset')
+  $('#show').html('')
   setTimeout(() => {
     $('#message').html('')
   }, 3000

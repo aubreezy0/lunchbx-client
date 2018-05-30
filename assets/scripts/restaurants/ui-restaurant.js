@@ -87,6 +87,9 @@ const showRestaurantsSuccess = function (data) {
   const showRestaurantsHtml = showRestaurantsTemplate({ restaurants: data.restaurants })
   // console.log(data)
   $('#show').html('').append(showRestaurantsHtml)
+  if (data.restaurants.length === 0) {
+    $('#no-show').html('Nothing here yet. Add a restaurant to your collection to get started!')
+  }
 
   // $('#message').html(`<div class="alert alert-success" role="alert">Look at all these restaurants!</div>`)
   // $('#message').css('text-align', 'center')
