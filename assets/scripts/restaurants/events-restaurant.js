@@ -41,19 +41,19 @@ const onShowRestaurants = function (event) {
     .catch(ui.showRestaurantsFailure)
 }
 
-const onShowUpdateForm = function (event) {
-  // console.log(this)
-  event.preventDefault()
-  // $('li.bros').siblings().css('background-color', 'red').removeClass('hidden')
-
-  // $('button.show-update-form').next().css('align: left')
-
-  // $('li').siblings().removeClass('hidden')
-  // works with real file $('.update-restaurant-form').removeClass('hidden')
-  // $('.show-update-form').parents('.update-restaurant-form').removeClass('hidden')
-  // works with real file $('.show-update-form').addClass('hidden')
-  // .then(ui.showUpdateFormSuccess)
-}
+// const onShowUpdateForm = function (event) {
+//   // console.log(this)
+//   event.preventDefault()
+//   // $('li.bros').siblings().css('background-color', 'red').removeClass('hidden')
+//
+//   // $('button.show-update-form').next().css('align: left')
+//
+//   // $('li').siblings().removeClass('hidden')
+//   // works with real file $('.update-restaurant-form').removeClass('hidden')
+//   // $('.show-update-form').parents('.update-restaurant-form').removeClass('hidden')
+//   // works with real file $('.show-update-form').addClass('hidden')
+//   // .then(ui.showUpdateFormSuccess)
+// }
 
 const onCloseList = function (event) {
   // console.log('clicked')
@@ -66,7 +66,7 @@ const addHandlers = () => {
   $('body').on('submit', '.update-restaurant', onUpdateRestaurant)
   $('body').on('submit', '.delete-restaurant', onDeleteRestaurant)
   $('body').on('submit', '.show-restaurants', onShowRestaurants)
-  $('body').on('click', '.show-update-form', onShowUpdateForm)
+  // $('body').on('click', '.show-update-form', onShowUpdateForm)
   $('body').on('click', '.close-list', onCloseList)
 }
 

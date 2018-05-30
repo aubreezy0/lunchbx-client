@@ -2,23 +2,21 @@
 
   <h1 data-id="{{restaurant.id}}" class="show-restaurants">
   </h1>
-  <ul data-id="{{restaurant.id}}">
-    <li>
+  <div data-id="{{restaurant.id}}">
       {{#if restaurant.restaurant_name}}
         <h3>{{restaurant.restaurant_name}}</h3>
       {{else}}
         No name information.
       {{/if}}
-    </li>
-    <li>
-
+</div>
+<div>
       Cuisine:
       {{#if restaurant.cuisine}}
         {{restaurant.cuisine}}
       {{else}}
         This cuisine is... not here?
       {{/if}}
-    </li>
+  </div>
     <!-- <div></div>
 
 ID:
