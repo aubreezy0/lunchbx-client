@@ -42,7 +42,7 @@ const onShowRestaurants = function (event) {
 }
 
 const onShowUpdateForm = function (event) {
-  console.log(this)
+  // console.log(this)
   event.preventDefault()
   // $('li.bros').siblings().css('background-color', 'red').removeClass('hidden')
 
@@ -56,7 +56,7 @@ const onShowUpdateForm = function (event) {
 }
 
 const onCloseList = function (event) {
-  console.log('clicked')
+  // console.log('clicked')
   event.preventDefault()
   $('#show').html('')
 }

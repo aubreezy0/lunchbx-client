@@ -7,7 +7,7 @@ const store = require('../store')
 // const signOutTemplate = require('../templates/sign-out.handlebars')
 
 const signUpSuccess = function () {
-  console.log('from signUpSuccess')
+  // console.log('from signUpSuccess')
   $('#message').html(`<div class="alert alert-success" role="alert">You have succesfully signed up</div>`)
   $('#message').css('text-align', 'center')
   $('form').trigger('reset')
@@ -27,7 +27,7 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   $('#message').html(`<div class="alert alert-success" role="alert">You have succesfully signed in!</div>`)
   $('#message').css('text-align', 'center')
   $('form').trigger('reset')

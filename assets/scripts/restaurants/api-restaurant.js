@@ -3,7 +3,7 @@ const config = require('../config')
 const store = require('../store')
 
 const addRestaurant = function (data) {
-  console.log('token is ' + store.user.token)
+  // console.log('token is ' + store.user.token)
   return $.ajax({
     url: config.apiUrl + '/restaurants',
     method: 'POST',
@@ -16,7 +16,7 @@ const addRestaurant = function (data) {
 }
 
 const updateRestaurant = function (data) {
-  console.log('api data is ', data)
+  // console.log('api data is ', data)
   return $.ajax({
     url: config.apiUrl + '/restaurants/' + data.restaurant.id,
     method: 'PATCH',

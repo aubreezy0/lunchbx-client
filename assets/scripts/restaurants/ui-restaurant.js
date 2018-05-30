@@ -3,7 +3,7 @@
 const showRestaurantsTemplate = require('../templates/restaurant/mvp-show-restaurants.handlebars')
 
 const addRestaurantSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   $('#message').html(`<div class="alert alert-success" role="alert">You added a restaurant!</div>`)
   $('#message').css('text-align', 'center')
   $('form').trigger('reset')
@@ -25,7 +25,7 @@ const addRestaurantFailure = function () {
 }
 
 const udpateRestaurantSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   $('#message').html(`<div class="alert alert-success" role="alert">You have succesfully updated the restaurant!</div>`)
   $('#message').css('text-align', 'center')
   $('form').trigger('reset')
@@ -52,7 +52,7 @@ const udpateRestaurantFailure = function () {
 }
 
 const deleteRestaurantSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   $('#message').html(`<div class="alert alert-success" role="alert">You have succesfully deleted the restaurant!</div>`)
   $('#message').css('text-align', 'center')
   $('input[type=text]').val('')
@@ -85,7 +85,7 @@ const deleteRestaurantFailure = function () {
 
 const showRestaurantsSuccess = function (data) {
   const showRestaurantsHtml = showRestaurantsTemplate({ restaurants: data.restaurants })
-  console.log(data)
+  // console.log(data)
   $('#show').html('').append(showRestaurantsHtml)
 
   // $('#message').html(`<div class="alert alert-success" role="alert">Look at all these restaurants!</div>`)
