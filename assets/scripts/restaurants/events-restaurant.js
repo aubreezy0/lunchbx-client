@@ -44,9 +44,14 @@ const onShowRestaurants = function (event) {
 const onShowUpdateForm = function (event) {
   console.log(this)
   event.preventDefault()
-  $('.update-restaurant-form').removeClass('hidden')
+  // $('li.bros').siblings().css('background-color', 'red').removeClass('hidden')
+
+  // $('button.show-update-form').next().css('align: left')
+
+  // $('li').siblings().removeClass('hidden')
+  // works with real file $('.update-restaurant-form').removeClass('hidden')
   // $('.show-update-form').parents('.update-restaurant-form').removeClass('hidden')
-  $('.show-update-form').addClass('hidden')
+  // works with real file $('.show-update-form').addClass('hidden')
   // .then(ui.showUpdateFormSuccess)
 }
 

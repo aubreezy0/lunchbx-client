@@ -1,6 +1,6 @@
 'use strict'
 // const store = require('../store')
-const showRestaurantsTemplate = require('../templates/restaurant/show-restaurants.handlebars')
+const showRestaurantsTemplate = require('../templates/restaurant/mvp-show-restaurants.handlebars')
 
 const addRestaurantSuccess = function (data) {
   console.log(data)

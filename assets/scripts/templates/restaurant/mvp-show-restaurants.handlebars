@@ -1,0 +1,67 @@
+{{#each restaurants as |restaurant|}}
+
+  <h1 data-id="{{restaurant.id}}" class="show-restaurants">
+  </h1>
+  <ul data-id="{{restaurant.id}}">
+    <li>
+      {{#if restaurant.restaurant_name}}
+        <h3>{{restaurant.restaurant_name}}</h3>
+      {{else}}
+        No name information.
+      {{/if}}
+    </li>
+    <li>
+
+      Cuisine:
+      {{#if restaurant.cuisine}}
+        {{restaurant.cuisine}}
+      {{else}}
+        This cuisine is... not here?
+      {{/if}}
+    </li>
+    <!-- <div></div>
+
+ID:
+      {{#if restaurant.id}}
+        {{restaurant.id}}
+      {{else}}
+        Can't find Restaurant ID
+      {{/if}} -->
+
+          <div class="close-list">
+            <form class="close-restaurant-list">
+              <fieldset>
+                <input class="button2" type="submit" value="Close List">
+              </fieldset>
+            </form>
+          </div>
+  <!-- <li>
+<button class="show-update-form button" data-id="{{restaurant.id}}">Update</button>
+</li> -->
+
+  <!-- {{> update-restaurant}}> -->
+  <div class="update-restaurant-form">
+    <form class="update-restaurant">
+      <fieldset>
+        <input type="hidden" name="restaurant[id]" autocomplete="restaurant id" placeholder="Restaurant ID" value="{{restaurant.id}}">
+
+        <input type="text" name="restaurant[restaurant_name]" autocomplete="restaurant" placeholder="New Restaurant Name" required>
+
+        <input type="text" name="restaurant[cuisine]" autocomplete="cuisine" placeholder="Update Cuisine" required>
+
+        <input class="button2" type="submit" value="Update">
+      </fieldset>
+    </form>
+  </div>
+  <div>
+<form class="delete-restaurant">
+<fieldset>
+  <input type="hidden" name="restaurant[id]" autocomplete="restaurant id" placeholder="Restaurant ID" value="{{restaurant.id}}">
+  <input class="button2" type="submit" value="Delete Restaurant">
+</fieldset>
+</form>
+</div>
+
+
+
+{{/each}}

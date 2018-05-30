@@ -26,14 +26,23 @@ ID:
         Can't find Restaurant ID
       {{/if}}
   </ul>
+  <ul>
+    <li>
   <form class="delete-restaurant">
     <fieldset>
       <input type="hidden" name="restaurant[id]" autocomplete="restaurant id" placeholder="Restaurant ID" value="{{restaurant.id}}">
       <input class="button" type="submit" value="Delete Restaurant">
     </fieldset>
   </form>
-
+</li>
+</ul>
+<ul>
+  <li class="bros">
+<div class="show-update-form-button">
 <button class="show-update-form button" data-id="{{restaurant.id}}">Update</button>
+</div>
+</li>
+<li class="bros">
 <!-- {{> update-restaurant}}> -->
 <div class="update-restaurant-form hidden">
   <form class="update-restaurant">
@@ -48,6 +57,8 @@ ID:
     </fieldset>
   </form>
 </div>
+</li>
+</ul>
 
 <div class="close-list">
   <form class="close-restaurant-list">

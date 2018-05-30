@@ -3,10 +3,11 @@ const config = require('../config')
 const store = require('../store')
 
 const addRestaurant = function (data) {
+  console.log('token is ' + store.user.token)
   return $.ajax({
     url: config.apiUrl + '/restaurants',
     method: 'POST',
-    header: {
+    headers: {
       contentType: 'application/json',
       Authorization: 'Token token=' + store.user.token
     },
@@ -51,6 +52,17 @@ const showRestaurants = function (data) {
     data
   })
 }
+
+// from filefox
+// const getFileUpload = function (data) {
+//   return $.ajax({
+//     method: 'GET',
+//     url: config.apiUrl + `/fileuploads`,
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
 
 module.exports = {
   addRestaurant,
