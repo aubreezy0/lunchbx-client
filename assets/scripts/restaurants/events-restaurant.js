@@ -60,6 +60,7 @@ const onCloseList = function (event) {
   // console.log('clicked')
   event.preventDefault()
   $('#show').html('')
+  $('#no-show').html('')
 }
 
 const addHandlers = () => {

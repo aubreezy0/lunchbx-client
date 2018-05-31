@@ -41,6 +41,7 @@ const udpateRestaurantFailure = function () {
   $('input[type=text]').val('')
   $('input[type=number]').val('')
   $('form').trigger('reset')
+  $('#no-show').html('')
   setTimeout(() => {
     $('#show').html('')
   }, 50
@@ -60,6 +61,7 @@ const deleteRestaurantSuccess = function (data) {
   // $('#show').remove()
   // commenting out form trigger as now button
   $('form').trigger('reset')
+  $('#no-show').html('')
   setTimeout(() => {
     $('#show').html('')
   }, 50
@@ -73,6 +75,7 @@ const deleteRestaurantSuccess = function (data) {
 const deleteRestaurantFailure = function () {
   $('#message').html(`<div class="alert alert-danger" role="alert">Failed to delete restaurant</div>`)
   $('#message').css('text-align', 'center')
+  $('#no-show').html('')
   setTimeout(() => {
     $('#show').html('')
   }, 50
@@ -86,6 +89,7 @@ const deleteRestaurantFailure = function () {
 const showRestaurantsSuccess = function (data) {
   const showRestaurantsHtml = showRestaurantsTemplate({ restaurants: data.restaurants })
   // console.log(data)
+  $('#no-show').html('')
   $('#show').html('').append(showRestaurantsHtml)
   if (data.restaurants.length === 0) {
     $('#no-show').html('Nothing here yet. Add a restaurant to your collection to get started!')
@@ -104,6 +108,7 @@ const showRestaurantsFailure = function () {
   $('#message').html(`<div class="alert alert-danger" role="alert"> Nothing to look at here.</div>`)
   $('#message').css('text-align', 'center')
   $('form').trigger('reset')
+  $('#no-show').html('')
   setTimeout(() => {
     $('#message').html('')
   }, 10000
