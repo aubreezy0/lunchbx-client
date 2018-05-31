@@ -79,6 +79,7 @@ const signOutSuccess = function (data) {
   $('#message').css('text-align', 'center')
   $('form').trigger('reset')
   $('#show').html('')
+  $('#no-show').html('')
   setTimeout(() => {
     $('#message').html('')
   }, 3000
