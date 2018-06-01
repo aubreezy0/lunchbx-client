@@ -60,7 +60,7 @@ Handlebars
 
 Easy as 1, 2, 3:
 <ul>
-<li>Fork and clone this repo and the <a href="https://github.com/aubreezy0/lunchbx-api" target="_blank"</li>
+<li>Fork and clone this repo and the <a href="https://github.com/aubreezy0/lunchbx-api" target="_blank">back end repo</a></li>
 <li>Run `npm install` for dependencies, then run `grunt serve`</li>
 <li>Checkout localhost:7165, and start playing with your own Lunchbx!</li>
 </ul>
