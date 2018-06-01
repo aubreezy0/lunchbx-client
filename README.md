@@ -1,12 +1,15 @@
-#Lunchbx - Client
+# Lunchbx - Client
 
-##Repos:
-Front End: https://github.com/aubreezy0/lunchbx-client
-Back End: https://github.com/aubreezy0/lunchbx-api
-Deployed Client: https://aubreezy0.github.io/lunchbx-client
-Deployed API: https://calm-journey-36314.herokuapp.com/
+## Repos
+<ul>
+<li>Front End: https://github.com/aubreezy0/lunchbx-client</li>
+<li>Back End: https://github.com/aubreezy0/lunchbx-api</li>
+<li>Deployed Client: https://aubreezy0.github.io/lunchbx-client</li>
+<li>Deployed API: https://calm-journey-36314.herokuapp.com/</li>
 
+## Welcome to lunchbx
 <img src="https://i.imgur.com/HQJUorw.png">
+</ul>
 
 ## What is Lunchbx?
 
