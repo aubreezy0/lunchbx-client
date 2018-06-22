@@ -52,8 +52,8 @@ const onPickRestaurant = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.pickRestaurant(data)
-    .then(ui.pickRestaurantsSuccess)
-    .catch(ui.pickRestaurantsFailure)
+    .then(ui.pickRestaurantSuccess)
+    .catch(ui.pickRestaurantFailure)
 }
 
 const addHandlers = () => {
