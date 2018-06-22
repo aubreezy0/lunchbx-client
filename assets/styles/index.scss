@@ -24,13 +24,20 @@ p {
 }
 
 body {
-  background-color: $background-color;
+  // background-color: $background-color;
+  background: url('../../assets/images/pink-lunchbox2.jpg');
+  background-size: cover;
   color: $font-color;
   margin-bottom: 100px;
   margin-left: 12px;
   margin-right: 12px;
   margin-top: 50px;
+  min-height: 100vh;
   text-align: center;
+}
+
+hr {
+  border-color: $black;
 }
 
 .messages {
@@ -68,8 +75,4 @@ body {
 
 .hover {
   opacity: 0.8;
-}
-
-hr {
-  color: $teal;
 }
