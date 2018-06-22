@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Welcome to Lunchbx!</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Welcome to Lunchbx</h1>
+            <p id="message"></p>
+      <h2 data-id="" class="sign-up">Sign Up</h2>
+
+      <form class="sign-up">
+        <fieldset>
+          <input type="email" name="credentials[email]" autocomplete="email" placeholder="Email" required>
+          <input type="text" name="credentials[display_name]" autocomplete="display-name" placeholder="Display Name" required>
+          <input type="password" name="credentials[password]" autocomplete="password" placeholder="Password" required>
+          <input type="password" name="credentials[password_confirmation]" autocomplete="password"  placeholder="Password Confirmation" required>
+          <input class="button" type="submit" value="Sign up!">
+        </fieldset>
+      </form>
+
+      <h2 data-id="" class="sign-in">Sign In</h2>
+
+      <form class="sign-in">
+        <fieldset>
+          <input type="email" name="credentials[email]" autocomplete="email" placeholder="Email" required>
+          <input type="password" name="credentials[password]" autocomplete="password" placeholder="Password" required>
+          <input class="button" type="submit" value="Sign In!">
+        </fieldset>
+      </form>
+
+    <div class="lunch-stuff hidden">
+      <h2 data-id="" class="add-restaurant">Add Restaurant</h2>
+
+      <form class="add-restaurant">
+        <fieldset>
+          <input type="text" name="restaurant[restaurant_name]" autocomplete="restaurant" placeholder="Restaurant Name" required>
+          <input type="text" name="restaurant[cuisine]" autocomplete="cuisine" placeholder="Cuisine" required>
+          <input class="button" type="submit" value="Add Restaurant">
+        </fieldset>
+      </form>
+
+
+      <h2 data-id="" class="show-restaurants">Show Restaurants</h2>
+
+      <form class="show-restaurants">
+        <fieldset>
+          <input class="button" type="submit" value="Show Restaurants">
+        </fieldset>
+      </form>
+
+      <p id="show"></p>
+      <p id="no-show"></p>
+<hr>
+
+      <h4 data-id="" class="change-password">Change Password</h4>
+
+      <form class="change-password">
+        <fieldset>
+          <input type="password" name="passwords[old]" autocomplete="password" placeholder="Old Password" required>
+          <input type="password" name="passwords[new]" autocomplete="password" placeholder="New Password" required>
+          <input class="button" type="submit" value="Update Password">
+        </fieldset>
+      </form>
+
+      <h3 data-id="" class="sign-out"></h3>
+
+      <form class="sign-out">
+        <fieldset>
+          <input class="button" type="submit" value="Sign Out">
+        </fieldset>
+      </form>
+    </div>
+
+    </body>
+</html>
