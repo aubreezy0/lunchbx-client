@@ -94,14 +94,6 @@ const showRestaurantsSuccess = function (data) {
   if (data.restaurants.length === 0) {
     $('#no-show').html('Nothing here yet. Add a restaurant to your collection to get started!')
   }
-
-  // $('#message').html(`<div class="alert alert-success" role="alert">Look at all these restaurants!</div>`)
-  // $('#message').css('text-align', 'center')
-  // $('form').trigger('reset')
-  // setTimeout(() => {
-  //   $('#message').html('')
-  // }, 10000
-  // )
 }
 
 const showRestaurantsFailure = function () {
@@ -115,6 +107,29 @@ const showRestaurantsFailure = function () {
   )
 }
 
+// For eventual randomizer
+const pickRestaurantSuccess = function (data) {
+  // const showRestaurantsHtml = showRestaurantsTemplate({ restaurants: data.restaurants })
+  // console.log(data)
+//   $('#no-show').html('')
+//   $('#show').html('').append(showRestaurantsHtml)
+//   if (data.restaurants.length === 0) {
+//     $('#no-show').html('Nothing here yet. Add a restaurant to your collection to get started!')
+//   }
+}
+
+// For eventual randomizer
+const pickRestaurantFailure = function () {
+//   $('#message').html(`<div class="alert alert-danger" role="alert"> Nothing to look at here.</div>`)
+//   $('#message').css('text-align', 'center')
+//   $('form').trigger('reset')
+//   $('#no-show').html('')
+//   setTimeout(() => {
+//     $('#message').html('')
+//   }, 10000
+//   )
+}
+
 module.exports = {
   addRestaurantSuccess,
   addRestaurantFailure,
@@ -123,5 +138,7 @@ module.exports = {
   deleteRestaurantSuccess,
   deleteRestaurantFailure,
   showRestaurantsSuccess,
-  showRestaurantsFailure
+  showRestaurantsFailure,
+  pickRestaurantSuccess,
+  pickRestaurantFailure
 }

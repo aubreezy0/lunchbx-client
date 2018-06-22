@@ -53,20 +53,23 @@ const showRestaurants = function (data) {
   })
 }
 
-// from filefox
-// const getFileUpload = function (data) {
-//   return $.ajax({
-//     method: 'GET',
-//     url: config.apiUrl + `/fileuploads`,
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
+// For eventual randomizer -- update!
+const pickRestaurant = function (data) {
+  // return $.ajax({
+  //   url: config.apiUrl + '/restaurants',
+  //   headers: {
+  //     contentType: 'application/json',
+  //     Authorization: 'Token token=' + store.user.token
+  //   },
+  //   method: 'GET',
+  //   data
+  // })
+}
 
 module.exports = {
   addRestaurant,
   updateRestaurant,
   deleteRestaurant,
-  showRestaurants
+  showRestaurants,
+  pickRestaurant
 }
